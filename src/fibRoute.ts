@@ -5,6 +5,7 @@ import fibonacci from './fib';
 export default (req: Request, res: Response) => {
     const { num } = req.params;
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
     const fibN: number = fibonacci(parseInt(num)) as number;
     let result = `fibonacci(${num}) is ${fibN}`;
 
